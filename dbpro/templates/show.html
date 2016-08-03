@@ -17,8 +17,8 @@
          <td>{{ person.name}}</td>
          <td>{{ person.phone}}</td>
          <td>{{ person.age}}</td>
-         <td><a href="/db/delete/{{person.id}}"> Delete</a></td>
-         <td><a href="/db/edit/{{person.id}}"> Edit</a></td>
+         <td><a href="/db/delete/{{person.id}}"><input type=button/ value=Delete/></a></td>
+         <td><a href="/db/edit/{{person.id}}"> <input type=button/ value=Edit/></a></td>
     </tr>
     {% endfor %}
     <td><a href="/db/insert/">Insert</a></td>
