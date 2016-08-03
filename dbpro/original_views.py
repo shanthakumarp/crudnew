@@ -37,16 +37,16 @@ def delete(request, person_id):
 
 
 def edit_favorites(request):
-	if request.is_ajax():
-		message = "Yes, AJAX"
-	else:
-		message = "Not Ajax"
-	return HttpResponse(message)
-	# if request.POST:
-	# 	name = request.POST['name']
-	# 	age = request.POST['age']
-	# 	message = "yes, got it"
-	# return render(request,'chek.html',{})
+	# if request.is_ajax():
+	# 	message = "Yes, AJAX"
+	# else:
+	# 	message = "Not Ajax"
+	# return HttpResponse(message)
+	# # if request.POST:
+	# # 	name = request.POST['name']
+	# # 	age = request.POST['age']
+	# # 	message = "yes, got it"
+	return render(request,'chek.html',{})
 
 
 def edit(request, person_id):
