@@ -44,11 +44,11 @@ def delete(request, person_id):
 
 
 def edit_favorites(request):
-	# if request.is_ajax():
-	# 	message = "Yes, AJAX"
-	# else:
-	# 	message = "Not Ajax"
-	# return HttpResponse(message)
+	if request.is_ajax():
+		message = "Yes, AJAX"
+	else:
+		message = "Not Ajax"
+	return HttpResponse(message)
 	if request.POST:
 		name = request.POST['name']
 		age = request.POST['age']
@@ -75,3 +75,4 @@ def edit(request, person_id):
 	t = loader.get_template('insert.html')
 	c = RequestContext(request,{'form': lform})
 	return HttpResponse(t.render(c)
+	#return render (request, 'insert.html',{'form':lform})
