@@ -1,0 +1,51 @@
+
+{% if query_results|length > 0 %}
+
+<table>
+  <thead>   
+    <tr>
+         <th> ID </th>
+         <th>Name</th>
+         <th>Phone</th>
+         <th>Age</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for person in query_results %}
+    <tr>
+         <td>{{ person.id}}</td>
+         <td>{{ person.name}}</td>
+         <td>{{ person.phone}}</td>
+         <td>{{ person.age}}</td>
+         <td><a href="/db/delete/{{person.id}}"> Delete</a></td>
+         <td><a href="/db/edit/{{person.id}}"> Edit</a></td>
+    </tr>
+    {% endfor %}
+    <td><a href="/db/insert/">Insert</a></td>
+    </tbody>
+<!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({
+            method: "POST"
+            url: "http://127.0.0.1:8000/db/insert/"
+            data: {name: "sample user", phone: "243235423", age: "29"}
+           
+        })
+        .done(function(data,status){
+            alert("Data saved " + data + "\nStatus: " + status);
+        
+    });
+});
+</script> -->
+
+    
+</table>
+{% else %}
+<span>No Query</span>
+{% endif %}

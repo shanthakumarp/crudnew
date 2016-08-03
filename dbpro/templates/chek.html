@@ -1,0 +1,57 @@
+<html>
+<head> 
+</head>
+<!-- <form method="post" id="test">
+	<input type="hidden" value="video#" />
+	<input type="submit" value ="Test button"/>
+	<div id = 'message'>Initial text</div>
+</form>
+<body> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- <script type="text/javascript">
+	$(document).ready(function(){
+		$("#test").submit(function(event){
+			event.preventDefault();
+			$.ajax({
+				type:"POST"
+				url:"http://127.0.0.1:8000/db/update_favor/",
+				data: {'video': $('#test').val() // form 
+			},
+			success: function(){
+				$('#message').html("<h2> Contact form submited </h2>")
+			}
+			});
+			return false;
+		});
+	});
+
+</script>
+	
+</body> -->
+
+<button>Send an HTTP GET request to a page and get the result back</button>
+<body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("button").click(function(){
+		var name ='shanth';
+		var age = 20;
+		$.ajax({
+			url:"/db/update_favor/",
+			type: "POST",
+			data:{name: name, age: age},
+			success: function(response){},
+			complete: function(){},
+			error: function(xhr,textStatus,thrownError){
+				alert("error doing something");
+				}
+			});
+		});
+	});
+
+
+</script>
+</body>
+
+
+</html>
