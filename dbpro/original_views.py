@@ -21,13 +21,6 @@ def insert(request):
 			print name,phone,age
 			return HttpResponseRedirect('/db/show/')
 			#p.save()
-
-		 #  p = Person(
-			# name=request.POST['name'],
-			# phone=request.POST['phone'],
-			# age = request.POST['age']
-			# )
-		    
 	# t = loader.get_template('insert.html')
 	# c = RequestContext(request)
 	#return HttpResponse(t.render(c))
@@ -49,11 +42,11 @@ def edit_favorites(request):
 	else:
 		message = "Not Ajax"
 	return HttpResponse(message)
-	if request.POST:
-		name = request.POST['name']
-		age = request.POST['age']
-		message = "yes, got it"
-	return render(request,'chek.html',{})
+	# if request.POST:
+	# 	name = request.POST['name']
+	# 	age = request.POST['age']
+	# 	message = "yes, got it"
+	# return render(request,'chek.html',{})
 
 
 def edit(request, person_id):
