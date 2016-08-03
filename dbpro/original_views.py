@@ -69,3 +69,6 @@ def edit(request, person_id):
 	c = RequestContext(request,{'form': lform})
 	return HttpResponse(t.render(c)
 	#return render (request, 'insert.html',{'form':lform})
+
+# added new items for merging
+# testing files here
